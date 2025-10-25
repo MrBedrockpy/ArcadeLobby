@@ -1,0 +1,8 @@
+name: ArcadeLobby
+version: '1.0'
+main: ru.mrbedrockpy.arcadelobby.ArcadeLobby
+api-version: '1.20'
+authors: [ MrBedrockpy ]
+
+depend:
+  - Multiverse-Core
