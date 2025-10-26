@@ -76,7 +76,7 @@ public class LobbyManager extends System<Lobby, String> {
             }
         }
         if (lobby.getPlayers().size() != lobby.getMinigame().getCountPlayersInTeam() * lobby.getTeams().size()) return;
-        lobby.onStart(() -> lobby.getMinigame().startGame(lobby.getTeams()));
+        lobby.onStart(() -> lobby.getMinigame().startGame(lobby));
     }
 
     @Nullable

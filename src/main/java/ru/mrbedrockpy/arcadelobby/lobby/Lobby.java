@@ -58,9 +58,11 @@ public abstract class Lobby implements ManagerItem<String> {
         return new ArrayList<>(teams);
     }
 
-    public abstract void onJoin(Player player);
+    public void onJoin(Player player) {}
 
-    public abstract void onLeave(Player player);
+    public void onLeave(Player player) {}
 
-    public abstract void onStart(Runnable startGame);
+    public void onStart(Runnable startGame) {
+        startGame.run();
+    }
 }
