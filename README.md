@@ -20,8 +20,8 @@ Add the library to your Spigot plugin project:
 <dependencies>
     <dependency>
         <groupId>com.github.MrBedrockpy</groupId>
-        <artifactId>bedrocklib</artifactId>
-        <version>2.0.4</version>
+        <artifactId>ArcadeLobby</artifactId>
+        <version>1.2</version>
     </dependency>
 </dependencies>
 ```
@@ -36,7 +36,7 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation 'com.github.MrBedrockpy:BedrockLib:2.0.4'
+    implementation 'com.github.MrBedrockpy:ArcadeLobby:1.2'
 }
 ```
 
@@ -50,7 +50,7 @@ repositories {
 
 ```kotlin
 dependencies {
-    implementation("com.github.MrBedrockpy:BedrockLib:2.0.4")
+    implementation("com.github.MrBedrockpy:ArcadeLobby:1.2")
 }
 ```
 
