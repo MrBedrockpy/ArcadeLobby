@@ -1,7 +1,5 @@
 package ru.mrbedrockpy.arcadelobby.lobby;
 
-import com.onarandombox.MultiverseCore.api.MVWorldManager;
-import com.onarandombox.MultiverseCore.api.MultiverseWorld;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -21,12 +19,7 @@ public class LobbyManager extends System<Lobby, String> {
     }
 
     public Lobby createNewLobby(Minigame minigame) {
-        String id = getFreeId();
-        MultiverseWorld template = minigame.getWaitLobbyTemplate();
-        MVWorldManager worldManager = getPlugin().getMultiverseCore().getMVWorldManager();
-        worldManager.cloneWorld(template.getName(), id);
-        MultiverseWorld world = worldManager.getMVWorld(id);
-        Lobby lobby = minigame.getLobby(id, world.getCBWorld(), minigame.createTeams());
+        Lobby lobby = minigame.getLobby(getFreeId());
         register(lobby);
         return lobby;
     }
